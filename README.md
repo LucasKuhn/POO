@@ -89,3 +89,7 @@ public class ListaDeAlunos
 
 }
 ```
+
+## Referencias
+- [Apostila da Caelum](https://www.caelum.com.br/apostila-java-orientacao-objetos/)
+- [Apostila da Caelum: Capítulo 4 - Orientação a objetos básica](https://www.caelum.com.br/apostila-java-orientacao-objetos/orientacao-a-objetos-basica/)
