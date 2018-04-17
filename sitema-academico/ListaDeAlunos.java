@@ -12,6 +12,7 @@
 public class ListaDeAlunos
 {   
     private Nodo inicio = null ;
+    private Nodo fim = null ;
     private int tamanho;
     private int capacidade;
     
@@ -27,7 +28,15 @@ public class ListaDeAlunos
     
     public Aluno getAluno(int index)
     {
-        return this.alunosDaLista[index];
+        Nodo temp = this.inicio ;
+        int i = 0 ;
+        while (temp.getProx() != null) {
+            temp = temp.getProx() ;
+            i++ ;
+            if (i == index) {
+                return temp.getInfo() ;
+            }
+        }
     }
     
     public int getCapacidade()
@@ -49,12 +58,17 @@ public class ListaDeAlunos
         if ( this.contem(novoAluno.nome) != null ){
             return 3;
         }
-        
+       
         Nodo temp = new Nodo(novoAluno);
-        temp.setProx(inicio);
-        inicio = temp;
+        if ( this.tamanho == 0 ) {
+            this.inicio = this.fim = temp;
+        }
+        else {
+            this.fim.setProx(temp) ;
+            this.fim = temp ;
+        }
         this.tamanho++ ;
-        return 0;
+        return 0 ;
     }    
     
     public int incluir(Aluno novoAluno, int index) 
@@ -70,8 +84,20 @@ public class ListaDeAlunos
         if ( this.tamanho+1 != index){
             return 1;
         }   
-        this.alunosDaLista[index] = novoAluno;
-        return 0;
+        
+        Nodo temp = this.inicio ;
+        int i = 0 ;
+         while (true) {
+            temp = temp.getProx() ;
+            i++ ;
+            if (i == index) {
+                Nodo novoNodo = new Nodo(novoAluno) ;
+                novoNodo.setProx(temp.getProx()) ;
+                temp.setProx(novoNodo) ;
+                return 0 ;
+            }
+        }
+
     }  
     
     public boolean vazia() 
@@ -92,12 +118,12 @@ public class ListaDeAlunos
      */
     public Aluno contem(String nomeDoAluno)
     {
-        for(int i = 0; i < this.tamanho ; i++)
-        {
-          if(this.alunosDaLista[i].nome.equals(nomeDoAluno))
-          {
-             return this.alunosDaLista[i];
-          }
+        Nodo temp = this.inicio ;
+        while (temp != null) {
+            if (temp.getInfo().nome.equals(nomeDoAluno)) {
+                return temp.getInfo() ;
+            }
+            temp = temp.getProx();
         }
         return null;
     }

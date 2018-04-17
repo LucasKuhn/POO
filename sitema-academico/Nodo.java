@@ -11,7 +11,7 @@ public class Nodo
         this.info = info ;
     }
     
-    public Nodo getProx(Aluno info) {
+    public Nodo getProx() {
         return this.prox ;
     }
     
