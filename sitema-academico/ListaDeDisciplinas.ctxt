@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=ListaDeDisciplinas
+comment1.params=
+comment1.target=ListaDeDisciplinas()
+comment2.params=capacidade
+comment2.target=ListaDeDisciplinas(int)
+comment3.params=indice
+comment3.target=Disciplina\ getDisciplina(int)
+comment4.params=novaDisciplina
+comment4.target=int\ incluir(Disciplina)
+comment5.params=novaDisciplina\ index
+comment5.target=int\ incluir(Disciplina,\ int)
+comment6.params=
+comment6.target=boolean\ vazia()
+comment7.params=
+comment7.target=int\ tamanho()
+comment8.params=nomeDoDisciplina
+comment8.target=Disciplina\ contem(java.lang.String)
+comment9.params=
+comment9.target=boolean\ ordernar()
+numComments=10

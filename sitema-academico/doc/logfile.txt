@@ -1,0 +1,39 @@
+Class documentation
+<---- javadoc command: ---->
+/Users/lucaskuhn/Downloads/BlueJ 4.1.2/BlueJ.app/Contents/JDK/Home/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+/Users/lucaskuhn/Downloads/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/bluejcore.jar:/Users/lucaskuhn/Downloads/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/junit-4.11.jar:/Users/lucaskuhn/Downloads/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/hamcrest-core-1.3.jar:/Users/lucaskuhn/Downloads/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/lang-stride.jar:/Users/lucaskuhn/Downloads/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/userlib/pi4j-core.jar:/Users/lucaskuhn/Downloads/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/userlib/pi4j-gpio-extension.jar:/Users/lucaskuhn/Downloads/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/userlib/pi4j-service.jar:/Users/lucaskuhn/Downloads/BlueJ 4.1.2/BlueJ.app/Contents/Resources/Java/userlib/pi4j-device.jar:/Users/lucaskuhn/Dev/ucs/poo/sitema-academico
+-d
+/Users/lucaskuhn/Dev/ucs/poo/sitema-academico/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+/Users/lucaskuhn/Dev/ucs/poo/sitema-academico/ListaDeAlunos.java
+<---- end of javadoc command ---->
+Loading source file /Users/lucaskuhn/Dev/ucs/poo/sitema-academico/ListaDeAlunos.java...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_144
+Building tree for all the packages and classes...
+Generating /Users/lucaskuhn/Dev/ucs/poo/sitema-academico/doc/ListaDeAlunos.html...
+/Users/lucaskuhn/Dev/ucs/poo/sitema-academico/ListaDeAlunos.java:93: warning - @param argument "nome" is not a parameter name.
+Generating /Users/lucaskuhn/Dev/ucs/poo/sitema-academico/doc/package-frame.html...
+Generating /Users/lucaskuhn/Dev/ucs/poo/sitema-academico/doc/package-summary.html...
+Generating /Users/lucaskuhn/Dev/ucs/poo/sitema-academico/doc/constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating /Users/lucaskuhn/Dev/ucs/poo/sitema-academico/doc/allclasses-frame.html...
+Generating /Users/lucaskuhn/Dev/ucs/poo/sitema-academico/doc/allclasses-noframe.html...
+Generating /Users/lucaskuhn/Dev/ucs/poo/sitema-academico/doc/index.html...
+1 warning

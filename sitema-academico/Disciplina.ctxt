@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Disciplina
+comment1.params=
+comment1.target=Disciplina()
+comment2.params=nome
+comment2.target=Disciplina(java.lang.String)
+comment3.params=nome\ vagas
+comment3.target=Disciplina(java.lang.String,\ int)
+comment4.params=novoAluno
+comment4.target=void\ matriculaAluno(Aluno)
+comment5.params=nome
+comment5.target=java.lang.String\ getNome(java.lang.String)
+comment6.params=vagas
+comment6.target=void\ setQuantidadeVagas(int)
+comment7.params=vagas
+comment7.target=int\ getQuantidadeVagas(int)
+comment8.params=vagas
+comment8.target=int\ getQuantidadeAlunos(int)
+numComments=9

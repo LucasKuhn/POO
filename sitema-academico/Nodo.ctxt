@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Nodo
+comment1.params=info
+comment1.target=Nodo(Aluno)
+comment2.params=info
+comment2.target=void\ setInfo(Aluno)
+comment3.params=info
+comment3.target=Nodo\ getProx(Aluno)
+comment4.params=
+comment4.target=Aluno\ getInfo()
+comment5.params=inicio
+comment5.target=void\ setProx(Nodo)
+numComments=6
