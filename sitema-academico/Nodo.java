@@ -1,13 +1,17 @@
-public class Nodo
+public class Nodo<E>
 {
-    private Aluno info ; 
+    private E info ; 
     private Nodo prox ;
     
-    public Nodo(Aluno info) {
+    public Nodo() {
+        this.info = null ;
+    }
+    
+    public Nodo(E info) {
         this.info = info ;
     }
 
-    public void setInfo(Aluno info) {
+    public void setInfo(E info) {
         this.info = info ;
     }
     
@@ -15,7 +19,7 @@ public class Nodo
         return this.prox ;
     }
     
-    public Aluno getInfo() {
+    public E getInfo() {
         return info ;
     }
     

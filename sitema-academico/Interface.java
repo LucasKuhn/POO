@@ -4,6 +4,8 @@ public class Interface
 {
     // Lista de Alunos
     private ListaDeAlunos alunosDaUniversidade = new ListaDeAlunos();
+    
+    private ListaDeAlunos alunosDaUniversidade = new ListaDeAlunos();
     private int quantidadeDeDisciplinas = 0 ;
     private Scanner entrada = new Scanner(System.in);
     int opcao ;
