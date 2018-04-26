@@ -1,3 +1,5 @@
 #BlueJ class context
 comment0.target=Aluno
-numComments=1
+comment1.params=
+comment1.target=java.lang.String\ getNome()
+numComments=2
