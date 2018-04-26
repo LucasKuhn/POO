@@ -67,8 +67,7 @@ public class Interface
                 quantidadeDeCursos++;
                 break;
             }
-             
-            
+
             opcao = this.opcoes();
         }
         System.out.println("Programa fechado.");
