@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ChecagemDeJogada
+comment1.params=copo
+comment1.target=ChecagemDeJogada(Copo)
+comment2.params=
+comment2.target=int\ validaSequencia()
+numComments=3

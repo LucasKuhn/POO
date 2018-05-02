@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Copo
+comment0.text=\n\ Write\ a\ description\ of\ class\ Copo\ here.\n\n\ @author\ Lucas\n\ @version\ 1\n
+comment1.params=
+comment1.target=Copo()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Copo\n
+comment2.params=
+comment2.target=void\ rolaDados()
+comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment3.params=
+comment3.target=void\ mostraDados()
+comment4.params=
+comment4.target=Dado[]\ getDados()
+comment5.params=indice
+comment5.target=Dado\ getDado(int)
+comment6.params=numeroDoDado
+comment6.target=void\ rolaNovamente(int)
+numComments=7
