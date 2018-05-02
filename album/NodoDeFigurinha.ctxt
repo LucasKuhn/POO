@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=NodoDeFigurinha
+comment1.params=
+comment1.target=NodoDeFigurinha()
+comment2.params=numero
+comment2.target=void\ setNumero(int)
+comment3.params=
+comment3.target=NodoDeFigurinha\ getProx()
+comment4.params=
+comment4.target=NodoDeFigurinha\ getAnt()
+comment5.params=prox
+comment5.target=void\ setProx(NodoDeFigurinha)
+comment6.params=ant
+comment6.target=void\ setAnt(NodoDeFigurinha)
+numComments=7
