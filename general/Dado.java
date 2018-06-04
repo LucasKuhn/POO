@@ -8,9 +8,20 @@ import java.util.Random;
 public class Dado
 {
     int valor ;
+    Random random = new Random();
+    
     public Dado()
     {
-        Random random = new Random();
         this.valor = random.nextInt(6) + 1 ;
+    }
+
+    public Dado(int valor)
+    {
+        this.valor = valor ;
+    }
+    
+    public void rola()
+    {
+        this.valor = valor ;
     }
 }

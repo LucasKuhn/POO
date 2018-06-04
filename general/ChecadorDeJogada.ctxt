@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ChecadorDeJogada
+comment1.params=copo
+comment1.target=ChecadorDeJogada(Copo)
+comment2.params=
+comment2.target=int\ validaSequencia()
+comment3.params=
+comment3.target=int\ validaFullHand()
+comment4.params=
+comment4.target=int\ validaQuadra()
+comment5.params=
+comment5.target=int\ validaGeneral()
+comment6.params=array
+comment6.target=void\ reverseArray(int[])
+numComments=7

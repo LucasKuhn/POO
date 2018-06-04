@@ -9,7 +9,11 @@ public class NodoDeFigurinha
     public NodoDeFigurinha() {
         this.numero = random.nextInt(30) + 1 ;  
     }
-
+    
+    public NodoDeFigurinha(int numero) {
+        this.numero = numero ;  
+    }
+    
     public void setNumero(int numero) {
         this.numero = numero ;
     }
