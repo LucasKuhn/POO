@@ -89,6 +89,79 @@ public class ListaDeAlunos
 
 }
 ```
+## Herança
+Os tipos da subclasse devem ser compatíveis com os tipos da Herança
+```java
+public class Mamifero
+{
+    boolean sangueQuente = true ;
+    boolean glandulasMamarias = true ;
+}
+
+public class Humano extends Mamifero
+{
+    boolean ableToUseTools = true ;
+}
+```
+
+Todo humano é um mamífero, portanto
+
+```java
+Humano pedro ;
+pedro = new Mamifero() ;
+```
+
+# OverLoading e OverRiding
+
+- OverLoading se refere a carregar métodos subindo a hierarquia
+- OverRiding é quando um metodo da classe sobre escreve um método existente subindo a hierarquia
+
+# Comportamento dos construtores em hierarquia
+
+- Todos construtores são executados na hierarquia, de cima para baixo
+```java
+public class Animal
+{
+    public Animal()
+    {
+
+    }
+}
+
+public class Mamifero
+{
+    int quantidadeDeGlandulasMamarias ;
+
+    public Mamifero(int quantidadeDeGlandulasMamarias)
+    {
+
+    }
+}
+
+public class Humano
+{
+    string nome ;
+    public Humano(string nome)
+    {
+
+    }
+}
+```
+
+## Classes e métodos abstratos
+
+- Obriga as subclasses a implementar o método
+- Não se pode instanciar um objeto de uma classe abstrata
+
+```java
+public abstract class Pessoa
+{
+    public abstract void apresenta();
+}
+```
+
+
+
 
 ## Referencias
 - [Apostila da Caelum](https://www.caelum.com.br/apostila-java-orientacao-objetos/)

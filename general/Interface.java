@@ -71,6 +71,7 @@ public class Interface {
                             System.out.println("Você pontuou: " + pontos);
                             break;
                         } 
+                        opcao = 0 ;
                         break;
                     }
                 }
