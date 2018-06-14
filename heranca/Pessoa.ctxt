@@ -6,4 +6,6 @@ comment2.params=nome\ endere\u00E7o
 comment2.target=Pessoa(java.lang.String,\ java.lang.String)
 comment3.params=
 comment3.target=java.lang.String\ getNome()
-numComments=4
+comment4.params=
+comment4.target=java.lang.String\ apresenta()
+numComments=5

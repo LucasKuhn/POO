@@ -1,4 +1,4 @@
-public class Pessoa
+public abstract class Pessoa
 {
     private String nome ; 
     protected String endereço ; 
@@ -18,4 +18,6 @@ public class Pessoa
     {
         return this.nome ;
     }
+    
+    public abstract String apresenta();
 }

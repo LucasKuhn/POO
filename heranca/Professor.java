@@ -10,6 +10,6 @@ public class Professor extends Pessoa
     // Apresenta com nome + número de disciplinas que está cursando
     public String apresenta()
     {
-        return this.getNome()+cursoMinistrado;
+        return "Professor " + this.getNome() + " está ministrando "  + cursoMinistrado ;
     }
 }
