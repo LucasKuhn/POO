@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Ranking
+comment1.params=
+comment1.target=Ranking()
+comment2.params=jogador
+comment2.target=void\ incluir(Jogador)
+numComments=3

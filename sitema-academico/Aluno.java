@@ -5,4 +5,10 @@ public class Aluno
     int idade;
     String endereço;
     Curso curso;
+    
+    
+        public String getNome()
+    {
+        return this.nome ;
+    }
 }

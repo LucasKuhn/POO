@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=ListaComEncadeamento
+comment0.text=\ \n\ \n\ Conven\u00E7\u00E3o\ para\ retorno\ dos\ m\u00E9todos\ de\ inclus\u00E3o\:\n\ 0\ -\ Inclus\u00E3o\ com\ sucesso\ \n\ 1\ -\ Indice\ inv\u00E1lido\ \n\ 2\ -\ Capacidade\ excedida\n\ 3\ -\ Aluno\ j\u00E1\ existe\n\ \n\ @author\ Lucas\n\ @version\ 12/04\n
+comment1.params=
+comment1.target=ListaComEncadeamento()
+comment2.params=capacidade
+comment2.target=ListaComEncadeamento(int)
+comment3.params=index
+comment3.target=java.lang.Object\ get(int)
+comment4.params=
+comment4.target=int\ getCapacidade()
+comment5.params=capacidade
+comment5.target=int\ setCapacidade(int)
+comment6.params=novoObjeto
+comment6.target=int\ incluir(java.lang.Object)
+comment7.params=novoObjeto\ index
+comment7.target=int\ incluir(java.lang.Object,\ int)
+comment8.params=
+comment8.target=boolean\ vazia()
+comment9.params=
+comment9.target=int\ tamanho()
+numComments=10

@@ -9,26 +9,26 @@
      * @author Lucas
      * @version 12/04
      */ 
-public class ListaDeAlunos
+public class ListaComEncadeamento<T>
 {   
-    private Nodo inicio = null ;
-    private Nodo fim = null ;
+    private Nodo<T> inicio = null ;
+    private Nodo<T> fim = null ;
     private int tamanho;
     private int capacidade;
     
-    public ListaDeAlunos()
+    public ListaComEncadeamento()
     {
         this.capacidade = -1 ;
     }
     
-    public ListaDeAlunos(int capacidade)
+    public ListaComEncadeamento(int capacidade)
     {
         this.capacidade = capacidade ;
     }
     
-    public Aluno getAluno(int index)
+    public T get(int index)
     {
-        Nodo temp = this.inicio ;
+        Nodo<T> temp = this.inicio ;
         int i = 0 ;
         while (temp.getProx() != null) {
             temp = temp.getProx() ;
@@ -37,6 +37,7 @@ public class ListaDeAlunos
                 return temp.getInfo() ;
             }
         }
+        return null ;
     }
     
     public int getCapacidade()
@@ -49,17 +50,17 @@ public class ListaDeAlunos
         return this.capacidade = capacidade;
     }
     
-    public int incluir(Aluno novoAluno) 
+    public int incluir(T novoObjeto) 
     {
         if ( this.tamanho >= this.capacidade){
             return 2;
         }
         
-        if ( this.contem(novoAluno.nome) != null ){
-            return 3;
-        }
+        //if ( this.contem(novoObjeto.nome) != null ){
+        //    return 3;
+        //}
        
-        Nodo temp = new Nodo(novoAluno);
+        Nodo temp = new Nodo(novoObjeto);
         if ( this.tamanho == 0 ) {
             this.inicio = this.fim = temp;
         }
@@ -73,11 +74,11 @@ public class ListaDeAlunos
     
     
     
-    public int incluir(Aluno novoAluno, int index) 
+    public int incluir(T novoObjeto, int index) 
     {
-        if ( this.contem(novoAluno.nome) != null ){
-            return 3; // Aluno já existe
-        }
+        //if ( this.contem(novoObjeto.nome) != null ){
+        //    return 3; // Aluno já existe
+        //}
         
         if ( this.tamanho >= this.capacidade){
             return 2; // Capacidade Excedida
@@ -89,7 +90,7 @@ public class ListaDeAlunos
         
         if ( index == this.tamanho ) // Ultima posição
         {  
-            return this.incluir(novoAluno) ;
+            return this.incluir(novoObjeto) ;
         }
         
         Nodo temp = this.inicio ;
@@ -98,7 +99,7 @@ public class ListaDeAlunos
         {
             if (i == index) 
             { 
-                Nodo novoNodo = new Nodo(novoAluno) ;
+                Nodo<T> novoNodo = new Nodo<T>(novoObjeto) ;
                 if (index == 0) // Primeira posição
                 { 
                     novoNodo.setProx(temp) ;
@@ -133,9 +134,10 @@ public class ListaDeAlunos
      * @param nome Nome do aluno que deve ser procurado
      * @return o aluno casa o encontre ou null
      */
+    /**
     public Aluno contem(String nomeDoAluno)
     {
-        Nodo temp = this.inicio ;
+        Nodo<T> temp = this.inicio ;
         while (temp != null) {
             if (temp.getInfo().nome.equals(nomeDoAluno)) {
                 return temp.getInfo() ;
@@ -143,9 +145,9 @@ public class ListaDeAlunos
             temp = temp.getProx();
         }
         return null;
-    }
+    }*/
     
-    public boolean ordernar()
+    /**public boolean ordernar()
     {
         // Bubble Sort
         Nodo temp = this.inicio ; 
@@ -170,5 +172,5 @@ public class ListaDeAlunos
             }
         }
         return true ;
-    }
+    }*/
 }

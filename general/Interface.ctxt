@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Interface
+comment1.params=
+comment1.target=void\ mostraMenuPrincipal()
+comment2.params=
+comment2.target=int\ menuPrincipal()
+comment3.params=
+comment3.target=int\ menuJogo1()
+comment4.params=
+comment4.target=int\ menuJogo2()
+comment5.params=
+comment5.target=void\ limpaTela()
+comment6.params=entrada\ quantidadeDeDados
+comment6.target=int[]\ selecionaDados(java.util.Scanner,\ int)
+comment7.params=jogador
+comment7.target=void\ mostraDados(Jogador)
+numComments=8

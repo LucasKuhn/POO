@@ -2,14 +2,14 @@ import java.util.Scanner ;
 
 public class Interface
 {
-    // Lista de Alunos
+    // Listas
     private ListaDeAlunos alunosDaUniversidade = new ListaDeAlunos();
-    private int quantidadeDeDisciplinas = 0 ;
+    private ListaDeDisciplinas alunosDaDisciplina = new ListaDeDisciplinas();
+   
+    // Disciplinas
     private Scanner entrada = new Scanner(System.in);
     int opcao ;
     
-    // Disciplinas
-    private ListaDeDisciplinas alunosDaDisciplina = new ListaDeDisciplinas();
       
     // Array de cursos
     Curso[] cursosDaUniversidade = new Curso[1000] ;
@@ -64,9 +64,26 @@ public class Interface
                 cursosDaUniversidade[quantidadeDeCursos] = cursoAuxiliar;
                 quantidadeDeCursos++;
                 break;
-            }
-             
-            
+                
+                case 5:
+                System.out.println("informe o nome do aluno:");
+                String nome = entrada.nextLine();
+                Aluno aluno = alunosDaUniversidade.contem(nome);
+                if(aluno != null)
+                    {
+                    System.out.println("informe o nome da disciplina:");
+                    String nomeDisc = entrada.nextLine();
+                    for (int i=0 ; i<disciplinasDaUniversidade.tamanho(); i++)
+                    {
+                        
+                    }
+                    else
+                    {
+                        System.out.println("aluno n�o cadastrado");
+                    }
+                    break;
+                }
+
             opcao = this.opcoes();
         }
         System.out.println("Programa fechado.");

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Jogador
+comment1.params=nome
+comment1.target=Jogador(java.lang.String)
+comment2.params=
+comment2.target=Copo\ getCopo()
+comment3.params=y
+comment3.target=int\ sampleMethod(int)
+comment4.params=
+comment4.target=void\ mostraDados()
+comment5.params=dadosSelecionados\ quantidadeDeDados
+comment5.target=void\ rolaNovamente(int[],\ int)
+numComments=6
