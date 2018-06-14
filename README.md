@@ -1,94 +1,5 @@
 # Programação Orientada a Objectos
 
-```java
-public class ListaDeAlunos
-{
-    // Convenção para retorno dos métodos de inclusão:
-    // 0 - Inclusão com sucesso
-    // 1 - Indice inválido
-    // 2 - Capacidade excedida
-    // 3 - Aluno já existe
-
-    private Aluno[] alunosDaLista;
-    private int quantidadeDeAlunos;
-    private int capacidadeMaxima;
-
-    public ListaDeAlunos()
-    {
-        capacidadeMaxima = 100 ;
-        alunosDaLista = new Aluno[capacidadeMaxima] ;
-    }
-
-    public ListaDeAlunos(int capacidade)
-    {
-        capacidadeMaxima = capacidade ;
-        alunosDaLista = new Aluno[capacidadeMaxima] ;
-    }
-
-    public Aluno get(int index)
-    {
-        return this.alunosDaLista[index];
-    }
-
-    public int incluir(Aluno novoAluno)
-    {
-        if ( this.contem(novoAluno.nome) != null ){
-            return 3;
-        }
-
-        if ( this.quantidadeDeAlunos >= this.capacidadeMaxima){
-            return 2;
-        }        
-
-        this.alunosDaLista[quantidadeDeAlunos] = novoAluno;
-        return 0;
-    }    
-
-    public int incluir(Aluno novoAluno, int index)
-    {
-        if ( this.contem(novoAluno.nome) != null ){
-            return 3;
-        }
-
-        if ( this.quantidadeDeAlunos >= this.capacidadeMaxima){
-            return 2;
-        }        
-
-        if ( this.quantidadeDeAlunos+1 != index){
-            return 1;
-        }   
-        this.alunosDaLista[index] = novoAluno;
-        return 0;
-    }  
-
-    public boolean vazia()
-    {
-        if (this.quantidadeDeAlunos == 0) {
-            return true ;
-        } else {
-            return false ;
-        }
-    }  
-
-    public int tamanho()
-    {
-        return this.alunosDaLista.length;
-    }
-
-    public Aluno contem(String nomeDoAluno)
-    {
-        for(int i = 0; i < this.alunosDaLista.length; i++)
-        {
-          if(this.alunosDaLista[i].nome.equals(nomeDoAluno))
-          {
-             return this.alunosDaLista[i];
-          }
-        }
-        return null;
-    }
-
-}
-```
 ## Herança
 Os tipos da subclasse devem ser compatíveis com os tipos da Herança
 ```java
@@ -150,8 +61,8 @@ public class Humano
 
 ## Classes e métodos abstratos
 
-- Obriga as subclasses a implementar o método
 - Não se pode instanciar um objeto de uma classe abstrata
+- Caso tenha um método abstrato, obriga as subclasses a implementar o método
 
 ```java
 public abstract class Pessoa
@@ -160,8 +71,28 @@ public abstract class Pessoa
 }
 ```
 
+- Um método abstrato é um protótipo de método; nunca tem corpo
 
-
+## Classe interface
+- Uma classe Interface não pode implementar métodos, ela demonstra como é a interface de comunicação (Os métodos públicos disponíveis) em todas as subclasses da interface.
+```java
+public interface Lista<T>
+{
+    public int tamanho();
+}
+```
+```java
+public class ListaComEncadeamento<T> implements Lista<T>
+{
+    int tamanho ;
+    public int tamanho()
+    {
+        return this.tamanho ;
+    }
+}
+```
+- Uma classe não pode herdar de várias classes abstratas, mas pode "herdar" (implementar) várias interface.
+- Uma classe abstrata pode herdar de uma interface sem implementar os métodos da interface, mas as sublasses concretas **precisam** implementar tanto os métodos da classe abstrata quanto da interface da qual ela herdou.
 
 ## Referencias
 - [Apostila da Caelum](https://www.caelum.com.br/apostila-java-orientacao-objetos/)

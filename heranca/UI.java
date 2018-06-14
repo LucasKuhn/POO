@@ -11,7 +11,8 @@ public class UI
     {
         System.out.println("1. incluir um aluno"); 
         System.out.println("2. incluir um professor"); 
-        System.out.println("3. apresentar as pessoas"); 
+        System.out.println("3. incluir um funcionario"); 
+        System.out.println("4. apresentar as pessoas"); 
         int option = scanner.nextInt();
         scanner.nextLine();
 
@@ -38,7 +39,14 @@ public class UI
                     lista.add(professor);
                 break ;
                 
-                case 3: 
+                case 3:
+                    System.out.println("Digite o nome do funcionario"); 
+                    nome = scanner.nextLine();
+                    Funcionario funcionario = new Funcionario(nome) ;
+                    lista.add(funcionario);
+                break ;
+                
+                case 4: 
                 for (Pessoa pessoa : lista) {
                     System.out.println(pessoa.apresenta()) ;
                 }
@@ -46,7 +54,8 @@ public class UI
             }   
             System.out.println("1. incluir um aluno"); 
             System.out.println("2. incluir um professor"); 
-            System.out.println("3. apresentar as pessoas"); 
+            System.out.println("3. incluir um funcionario"); 
+            System.out.println("4. apresentar as pessoas"); 
             System.out.println("0. Sair"); 
             option = scanner.nextInt();
             scanner.nextLine();
