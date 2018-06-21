@@ -104,8 +104,7 @@ class ABP:
 
 
 
-      def pre_fixado(self,node):
-
+      def pre_fixado(self, node):
            if node is not None:
 
               print node.info.nome
@@ -129,12 +128,11 @@ class ABP:
               self.pos_fixado(node.right)
               print node.info.nome
 
-      def pesquisa_por_nome(self,node, nome):
-          if node:
+      def pesquisa_por_nome(self, node, nome):
+          if node is not None:
               if node.info.nome == nome : return node.info
-              self.pesquisa_por_nome(node.left,nome)
-              self.pesquisa_por_nome(node.right,nome)
-
+              self.pesquisa_por_nome(nome,node.left)
+              self.pesquisa_por_nome(nome,node.right)
 
 
 jogadores = []
@@ -193,17 +191,18 @@ jogadores.append(Jogador("21","Meio-campo","Aleksandr Yerokhin","13 October 1989
 jogadores.append(Jogador("22","Atacante","Artem Dzyuba","22 August 1988 ","29","25","13","Arsenal Tula"))
 jogadores.append(Jogador("23","Defensor","Igor Smolnikov","8 August 1988 ","29","27","0","Zenit Saint Petersburg"))
 
-arvore_de_jogadores = ABP()
-for jogador in jogadores:
-    arvore_de_jogadores.insere(jogador)
-russia = Pais("Russia", arvore_de_jogadores)
+if __name__ == "__main__":
+    arvore_de_jogadores = ABP()
+    for jogador in jogadores:
+        arvore_de_jogadores.insere(jogador)
+    russia = Pais("Russia", arvore_de_jogadores)
 
-lista_de_paises = [brasil,russia]
+    lista_de_paises = [brasil,russia]
 
-arvore_de_paises = ABP()
-for pais in lista_de_paises:
-    arvore_de_paises.insere(pais)
-paises = arvore_de_paises
+    arvore_de_paises = ABP()
+    for pais in lista_de_paises:
+        arvore_de_paises.insere(pais)
+    paises = arvore_de_paises
 
 # arvore.pre_fixado(arvore.root)
 # arvore.percurso_por_nivel()
