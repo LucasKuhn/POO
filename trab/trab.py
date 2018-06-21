@@ -130,16 +130,13 @@ class ABP:
               print node.info.nome
 
       def pesquisa_por_nome(self,node, nome):
-          if node is None:
-              return None
-          else:
+          if node:
               if node.info.nome == nome : return node.info
               self.pesquisa_por_nome(node.left,nome)
               self.pesquisa_por_nome(node.right,nome)
 
 
 
-arvore = ABP()
 jogadores = []
 jogadores.append(Jogador("1","Goleiro","Alisson","2/10/1992","25","27","0","Roma"))
 jogadores.append(Jogador("2","Defensor","Thiago Silva","22/09/1984","33","72","5","Saint-Germain"))
@@ -165,10 +162,50 @@ jogadores.append(Jogador("21","Atacante","Taison","13/01/1988","30","8","1","Sha
 jogadores.append(Jogador("22","Defensor","Fagner","11/06/1989","29","4","0","Corinthians"))
 jogadores.append(Jogador("23","Goleiro","Ederson","17/08/1993","24","1","0","Manchester City"))
 
-for jogador in jogadores:
-    arvore.insere(jogador)
 
-arvore.pre_fixado(arvore.root)
-arvore.percurso_por_nivel()
-arvore.pesquisa_por_nome(arvore.root,"Caio")
-arvore.pesquisa_por_nome(arvore.root,"Fernando")
+arvore_de_jogadores = ABP()
+for jogador in jogadores:
+    arvore_de_jogadores.insere(jogador)
+brasil = Pais("Brasil", arvore_de_jogadores)
+
+jogadores = []
+jogadores.append(Jogador("1","Goleiro","Igor Akinfeev (Captain)","8 April 1986 ","32","108","0","CSKA Moscow"))
+jogadores.append(Jogador("2","Defensor","Mário Fernandes","19 September 1990 ","27","7","0","CSKA Moscow"))
+jogadores.append(Jogador("3","Defensor","Ilya Kutepov","29 July 1993 ","24","9","0","Spartak Moscow"))
+jogadores.append(Jogador("4","Defensor","Sergei Ignashevich","14 July 1979 ","38","124","8","CSKA Moscow"))
+jogadores.append(Jogador("5","Defensor","Andrei Semyonov","24 March 1989 ","29","6","0","Akhmat Grozny"))
+jogadores.append(Jogador("6","Meio-campo","Denis Cheryshev","26 December 1990 ","27","13","3","Villarreal"))
+jogadores.append(Jogador("7","Meio-campo","Daler Kuzyayev","15 January 1993 ","25","8","0","Zenit Saint Petersburg"))
+jogadores.append(Jogador("8","Meio-campo","Yury Gazinsky","20 July 1989 ","28","8","1","Krasnodar"))
+jogadores.append(Jogador("9","Meio-campo","Alan Dzagoev","17 June 1990 ","28","58","9","CSKA Moscow"))
+jogadores.append(Jogador("10","Atacante","Fyodor Smolov","5 February 1990 ","28","34","12","Krasnodar"))
+jogadores.append(Jogador("11","Meio-campo","Roman Zobnin","11 February 1994 ","24","14","0","Spartak Moscow"))
+jogadores.append(Jogador("12","Goleiro","Andrey Lunyov","13 November 1991 ","26","3","0","Zenit Saint Petersburg"))
+jogadores.append(Jogador("13","Defensor","Fyodor Kudryashov","5 April 1987 ","31","20","0","Rubin Kazan"))
+jogadores.append(Jogador("14","Defensor","Vladimir Granat","22 May 1987 ","31","12","1","Rubin Kazan"))
+jogadores.append(Jogador("15","Atacante","Aleksei Miranchuk","17 October 1995 ","22","18","4","Lokomotiv Moscow"))
+jogadores.append(Jogador("16","Meio-campo","Anton Miranchuk","17 October 1995 ","22","6","0","Lokomotiv Moscow"))
+jogadores.append(Jogador("17","Meio-campo","Aleksandr Golovin","30 May 1996 ","22","21","3","CSKA Moscow"))
+jogadores.append(Jogador("18","Meio-campo","Yuri Zhirkov","20 August 1983 ","34","86","2","Zenit Saint Petersburg"))
+jogadores.append(Jogador("19","Meio-campo","Aleksandr Samedov","19 July 1984 ","33","50","7","Spartak Moscow"))
+jogadores.append(Jogador("20","Goleiro","Vladimir Gabulov","19 October 1983 ","34","10","0","Club Brugge"))
+jogadores.append(Jogador("21","Meio-campo","Aleksandr Yerokhin","13 October 1989 ","28","17","0","Zenit Saint Petersburg"))
+jogadores.append(Jogador("22","Atacante","Artem Dzyuba","22 August 1988 ","29","25","13","Arsenal Tula"))
+jogadores.append(Jogador("23","Defensor","Igor Smolnikov","8 August 1988 ","29","27","0","Zenit Saint Petersburg"))
+
+arvore_de_jogadores = ABP()
+for jogador in jogadores:
+    arvore_de_jogadores.insere(jogador)
+russia = Pais("Russia", arvore_de_jogadores)
+
+lista_de_paises = [brasil,russia]
+
+arvore_de_paises = ABP()
+for pais in lista_de_paises:
+    arvore_de_paises.insere(pais)
+paises = arvore_de_paises
+
+# arvore.pre_fixado(arvore.root)
+# arvore.percurso_por_nivel()
+# arvore.pesquisa_por_nome(arvore.root,"Caio")
+# arvore.pesquisa_por_nome(arvore.root,"Fernando")
