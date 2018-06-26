@@ -1,139 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-class Jogador:
-
-      def __init__(self,numero,posicao,nome,nascimento,idade,jogos,gols,time):
-          self.numero = numero
-          self.posicao = posicao
-          self.nome = nome
-          self.nascimento = nascimento
-          self.idade = idade
-          self.jogos = jogos
-          self.gols = gols
-          self.gols = gols
-          self.time = time
-
-class Pais:
-
-      def __init__(self,nome,jogadores):
-          self.nome = nome
-          self.jogadores = jogadores
-
-
-class Node:
-      def __init__(self,info):
-
-          self.info = info
-          self.left = None
-          self.right = None
-          self.level = None
-
-      def __str__(self):
-
-          return str(self.info)
-
-
-class ABP:
-
-      def __init__(self):
-
-          self.root = None
-
-
-      def insere(self,val):
-
-          if self.root == None:
-
-             self.root = Node(val)
-
-          else:
-
-             current = self.root
-
-             while 1:
-
-                 if val.nome < current.info.nome:
-
-                   if current.left:
-                      current = current.left
-                   else:
-                      current.left = Node(val)
-                      break;
-
-                 elif val.nome > current.info.nome:
-
-                    if current.right:
-                       current = current.right
-                    else:
-                       current.right = Node(val)
-                       break;
-
-                 else:
-                    break
-
-      def percurso_por_nivel(self):
-          self.root.level = 0
-          fila = [self.root]
-          saida = []
-          nivel_atual = self.root.level
-
-          while len(fila) > 0:
-
-             folha_atual = fila.pop(0)
-
-             if folha_atual.level > nivel_atual:
-                nivel_atual += 1
-                saida.append("\n")
-
-             saida.append(str(folha_atual.info.nome) + " - ")
-
-             if folha_atual.left:
-
-                folha_atual.left.level = nivel_atual + 1
-                fila.append(folha_atual.left)
-
-
-             if folha_atual.right:
-
-                folha_atual.right.level = nivel_atual + 1
-                fila.append(folha_atual.right)
-
-
-          print "".join(saida)
-
-
-
-      def pre_fixado(self, node):
-           if node is not None:
-
-              print node.info.nome
-              self.pre_fixado(node.left)
-              self.pre_fixado(node.right)
-
-      def central(self,node):
-
-          if node is not None:
-
-              self.central(node.left)
-              print node.info.nome
-              self.central(node.right)
-
-
-      def pos_fixado(self,node):
-
-           if node is not None:
-
-              self.pos_fixado(node.left)
-              self.pos_fixado(node.right)
-              print node.info.nome
-
-      def pesquisa_por_nome(self, node, nome):
-          if node is not None:
-              if node.info.nome == nome : return node.info
-              self.pesquisa_por_nome(nome,node.left)
-              self.pesquisa_por_nome(nome,node.right)
-
+from classes import *
 
 jogadores = []
 jogadores.append(Jogador("1","Goleiro","Alisson","2/10/1992","25","27","0","Roma"))
@@ -159,7 +27,6 @@ jogadores.append(Jogador("20","Atacante","Roberto Firmino","2/10/1991","26","22"
 jogadores.append(Jogador("21","Atacante","Taison","13/01/1988","30","8","1","Shakhtar Donetsk"))
 jogadores.append(Jogador("22","Defensor","Fagner","11/06/1989","29","4","0","Corinthians"))
 jogadores.append(Jogador("23","Goleiro","Ederson","17/08/1993","24","1","0","Manchester City"))
-
 
 arvore_de_jogadores = ABP()
 for jogador in jogadores:
@@ -191,20 +58,15 @@ jogadores.append(Jogador("21","Meio-campo","Aleksandr Yerokhin","13 October 1989
 jogadores.append(Jogador("22","Atacante","Artem Dzyuba","22 August 1988 ","29","25","13","Arsenal Tula"))
 jogadores.append(Jogador("23","Defensor","Igor Smolnikov","8 August 1988 ","29","27","0","Zenit Saint Petersburg"))
 
-if __name__ == "__main__":
-    arvore_de_jogadores = ABP()
-    for jogador in jogadores:
-        arvore_de_jogadores.insere(jogador)
-    russia = Pais("Russia", arvore_de_jogadores)
+arvore_de_jogadores = ABP()
+for jogador in jogadores:
+    arvore_de_jogadores.insere(jogador)
+russia = Pais("Russia", arvore_de_jogadores)
 
-    lista_de_paises = [brasil,russia]
+lista_de_paises = [brasil,russia]
 
-    arvore_de_paises = ABP()
-    for pais in lista_de_paises:
-        arvore_de_paises.insere(pais)
-    paises = arvore_de_paises
-
-# arvore.pre_fixado(arvore.root)
-# arvore.percurso_por_nivel()
-# arvore.pesquisa_por_nome(arvore.root,"Caio")
-# arvore.pesquisa_por_nome(arvore.root,"Fernando")
+arvore_de_paises = ABP()
+for pais in lista_de_paises:
+    arvore_de_paises.insere(pais)
+paises = arvore_de_paises
+arvore_com_todos = gera_arvore_com_todos(paises.root)
