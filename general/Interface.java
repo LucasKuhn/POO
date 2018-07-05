@@ -16,9 +16,12 @@ public class Interface {
             switch(opcao) // MENU PRINCIPAL
             {
                 case 1:
-                System.out.println("Qual o seu nome?");
+                System.out.println("Digite o nome do jogador 1:");
                 jogadorSelecionado = new Jogador(entrada.next()) ;
-                ranking.incluir(jogadorSelecionado) ;
+                ranking.incluir(jogadorSelecionado);
+                System.out.println("Digite o nome do jogador 2:");
+                jogadorSelecionado = new Jogador(entrada.next()) ;
+                ranking.incluir(jogadorSelecionado);
                 break;
                 
                 case 2:
@@ -84,7 +87,6 @@ public class Interface {
     private int menuPrincipal()
     {
         System.out.println("0.Sair");
-        System.out.println("1.Cadastrar Jogador");
         System.out.println("2.Jogar");
         return entrada.nextInt();
     }
