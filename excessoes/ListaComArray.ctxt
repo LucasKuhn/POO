@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ListaComArray
+comment1.params=capacidade
+comment1.target=ListaComArray(int)
+comment2.params=
+comment2.target=int\ tamanho()
+comment3.params=obj
+comment3.target=int\ incluir(java.lang.Object)
+comment3.text=\r\n\ M\u00E9todo\ para\ incluir\ objto\ no\ final\ da\ lista.\ O\ m\u00E9todo\ verifica\r\n\ se\ a\ lista\ est\u00E1\ cheia.\r\n\ \r\n\ @param\ obj\ um\ objeto\ para\ ser\ inclu\u00ED\u00ADdo\ na\ lista\r\n\ @return\ o\ m\u00E9todo\ retorna\ um\ c\u00F3digo\ int\ para\ informar\ o\ resultado\ da\ inclus\u00E3o.\r\n\ O\ c\u00F3digo\ pode\ ser\:\r\n\ 0\ -\ inclus\u00E3o\ com\ sucesso\r\n\ 1\ -\ lista\ cheia,\ portanto\ a\ inclus\u00E3o\ n\u00E3o\ acontece\r\n
+comment4.params=indice
+comment4.target=java.lang.Object\ get(int)
+numComments=5
