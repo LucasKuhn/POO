@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=InterfaceDeUsuario
+comment1.params=alunos\ cursos\ disciplinas
+comment1.target=InterfaceDeUsuario(Lista,\ Lista,\ Lista)
+comment2.params=
+comment2.target=void\ menuPrincipal()
+comment3.params=
+comment3.target=int\ menuDeOpcoes()
+numComments=4

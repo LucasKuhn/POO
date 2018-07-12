@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Professor
+comment1.params=
+comment1.target=int\ getRegistro()
+comment2.params=registro
+comment2.target=void\ setRegistro(int)
+numComments=3

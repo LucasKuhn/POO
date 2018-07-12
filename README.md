@@ -38,7 +38,8 @@ public class Animal
 
     }
 }
-
+```
+```java
 public class Mamifero
 {
     int quantidadeDeGlandulasMamarias ;
@@ -48,7 +49,8 @@ public class Mamifero
 
     }
 }
-
+```
+```java
 public class Humano
 {
     string nome ;
@@ -116,7 +118,7 @@ ordena()
   a.compareTo(b);
 }
 ```
-- Para implementar uma lista genérica, mas limitar os tipos de objetos que ela recebe pare ser apenas objeto que implementam Comparable
+- Para implementar uma lista genérica, mas limitar os tipos de objetos que ela recebe pare ser apenas objetos que implementam Comparable
 ```java
   class Lista<T extends Comparable>{
   }
