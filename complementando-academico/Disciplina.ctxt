@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Disciplina
+comment1.params=codigo\ nome\ vagas
+comment1.target=Disciplina(java.lang.String,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getCodigo()
+comment3.params=aluno
+comment3.target=boolean\ matricular(Pessoa)
+comment4.params=
+comment4.target=int\ vagasRestantes()
+numComments=5

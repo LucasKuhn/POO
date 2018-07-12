@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Pessoa
+comment1.params=
+comment1.target=java.lang.String\ getNome()
+comment2.params=nome
+comment2.target=void\ setNome(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getCpf()
+comment4.params=cpfDoAluno
+comment4.target=void\ setCpf(java.lang.String)
+comment5.params=cursoDoAluno
+comment5.target=void\ setMeuCurso(Curso)
+comment6.params=
+comment6.target=Curso\ getMeuCurso()
+comment7.params=other
+comment7.target=int\ compareTo(Pessoa)
+numComments=8

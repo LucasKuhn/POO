@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=PersistenciaComSerializacao
+comment1.params=lista
+comment1.target=void\ armazenaAlunos(Lista)
+comment2.params=lista
+comment2.target=void\ armazenaCursos(Lista)
+comment3.params=lista
+comment3.target=void\ armazenaDisciplinas(Lista)
+comment4.params=
+comment4.target=ListaComEncadeamento\ recuperaAlunos()
+comment5.params=
+comment5.target=ListaComArray\ recuperaCursos()
+comment6.params=
+comment6.target=ListaComEncadeamento\ recuperaDisciplinas()
+numComments=7
